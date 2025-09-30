@@ -26,7 +26,10 @@ class Ball1:
         self.image = load_image('ball21x21.png')
         self.x, self.y = random.randint(30, 770), 599
         self.speed = random.randint(5, 10)
-
+    def update(self):
+        self.y -= self.speed
+        if self.y <50:
+            self.y=50
 
 
 class Boy:
