@@ -31,6 +31,9 @@ class Ball1:
         if self.y <50:
             self.y=50
 
+    def draw(self):
+        self.image.clip_draw(0, 0, 21, 21, self.x, self.y)
+
 
 class Boy:
     def __init__(self):
