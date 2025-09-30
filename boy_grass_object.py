@@ -57,7 +57,9 @@ def reset_world():
     world.append(grass)
 
     team = [Boy() for i in range(11)]
-
+    ball1 = [Ball1() for i in range(10)]
+    world += team
+    world += ball1
 
 def update_world():
     for o in world:
