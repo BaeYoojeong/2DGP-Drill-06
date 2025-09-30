@@ -34,6 +34,19 @@ class Ball1:
     def draw(self):
         self.image.clip_draw(0, 0, 21, 21, self.x, self.y)
 
+class Ball2:
+    def __init__(self):
+        self.image = load_image('ball41x41.png')
+        self.x, self.y = random.randint(30, 770), 599
+        self.speed = random.randint(5, 20)
+    def update(self):
+        self.y -= self.speed
+        if self.y <50:
+            self.y=50
+
+    def draw(self):
+        self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
+
 
 class Boy:
     def __init__(self):
@@ -58,8 +71,11 @@ def reset_world():
 
     team = [Boy() for i in range(11)]
     ball1 = [Ball1() for i in range(10)]
+    ball2 = [Ball2() for i in range(10)]
     world += team
+    world += ball2
     world += ball1
+
 
 def update_world():
     for o in world:
