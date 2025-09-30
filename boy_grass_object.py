@@ -21,6 +21,14 @@ class Grass:
         self.image.draw(400, 30)
     def update(self): pass
 
+class Ball1:
+    def __init__(self):
+        self.image = load_image('ball21x21.png')
+        self.x, self.y = random.randint(30, 770), 599
+        self.speed = random.randint(5, 10)
+
+
+
 class Boy:
     def __init__(self):
         self.x, self.y = random.randint(100, 700), 90
@@ -43,7 +51,6 @@ def reset_world():
     world.append(grass)
 
     team = [Boy() for i in range(11)]
-    world += team
 
 
 def update_world():
