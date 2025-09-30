@@ -31,6 +31,7 @@ class Ball1:
         if self.y <50:
             self.y=50
 
+<<<<<<< HEAD
     def draw(self):
         self.image.clip_draw(0, 0, 21, 21, self.x, self.y)
 
@@ -47,6 +48,8 @@ class Ball2:
     def draw(self):
         self.image.clip_draw(0, 0, 41, 41, self.x, self.y)
 
+=======
+>>>>>>> parent of be86960 (공 이미지를 출력함)
 
 class Boy:
     def __init__(self):
